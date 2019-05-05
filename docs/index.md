@@ -4,7 +4,7 @@
 
 The source code for [toast](http://138.197.206.129:5010/galaxies) is publicly available, it is written in python using the [bokeh](https://bokeh.pydata.org/en/latest/) library.
 
-The machine learning techniques used in [toast](http://138.197.206.129:5010/galaxies) include Uniform Manifold Approximation and Projection [UMAP](https://github.com/lmcinnes/umap) for dimensionality reduction, in addition to several anomaly detection methods: (i) Unsupervised Random Forest ([Shi06](https://horvath.genetics.ucla.edu/html/RFclustering/RFclustering/RandomForestHorvath.pdf), [Baron16](https://arxiv.org/abs/1611.07526), [Reis18](https://arxiv.org/abs/1711.00022)), (ii) Isolation Forest [Liu08](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html#id1), (iii) Fisher Vectors ([Rotman19](in prep)) (iv) ... (v) ... .  --- is also used for ordering the galaxies before inspection (see below).
+The machine learning techniques used in [toast](http://138.197.206.129:5010/galaxies) include Uniform Manifold Approximation and Projection [UMAP](https://github.com/lmcinnes/umap) for dimensionality reduction, in addition to several anomaly detection methods: (i) Unsupervised Random Forest ([Shi06](https://horvath.genetics.ucla.edu/html/RFclustering/RFclustering/RandomForestHorvath.pdf), [Baron16](https://arxiv.org/abs/1611.07526), [Reis18](https://arxiv.org/abs/1711.00022)), (ii) Isolation Forest [Liu08](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html#id1), (iii) Fisher Vectors ([Rotman19](in prep)) (iv) ... (v) ... .  --- is also used for ordering the galaxies before inspection (see [get order](#orderSection)).
 
 ## Overview and basic use case
 
@@ -51,7 +51,8 @@ A comparison between the different methods and a discussion on the need of more 
 
 ## Additional features
 
-### Ordering the selected objects
+### <a id="orderSection"></a> Ordering the selected objects
+
 
 The ```Get order``` button could be used to order the selected objects before visually inspecting them. The ordering is based on the current embedding. Instead of going randomly from one selected object to another we might want to inspect objects with similar properties in groups. The ```Get order``` button effectively tries to find the shortest path to travel (on the embedding) between the selected objects.
 This can be useful for inspecting anomalies, as inspecting a group of anomalies with similar features can help us understand what are their unusual properties.
