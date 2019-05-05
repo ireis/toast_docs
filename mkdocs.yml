@@ -1,5 +1,7 @@
 site_name: toast
 
+copyright: For questions contact Itamar Reis (Tel-Aviv University), itamarreis@mail.tau.ac.il
+
 theme:
     name: readthedocs
     highlightjs: true

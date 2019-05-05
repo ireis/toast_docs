@@ -10,7 +10,7 @@ The machine learning techniques used in [toast](http://138.197.206.129:5010/gala
 
 ### Interactive selection of objects
 
-[toast](http://138.197.206.129:5010/galaxies) allows the user to view and select galaxies on a 2D embedding of the dataset. One of the supplied embedding is the familiar  Baldwin, Phillips & Telervich diagram [BPT](http://adsabs.harvard.edu/abs/1981PASP...93....5B). Using this embedding the user can select and view galaxies which have similar line ratios. Similarly, using the embeddings created by [UMAP](https://github.com/lmcinnes/umap), the user can select galaxies which have similar properties. In this case the similarity is an abstract similarity between the spectra of the galaxies. See the figure below for an example:
+[toast](http://138.197.206.129:5010/galaxies) allows the user to view and select galaxies from a 2D embedding of the dataset. One of the supplied embedding is the familiar  Baldwin, Phillips & Telervich diagram ([BPT](http://adsabs.harvard.edu/abs/1981PASP...93....5B)). Using this embedding the user can select and view galaxies which have similar emission line ratios. Similarly, using the embeddings created by [UMAP](https://github.com/lmcinnes/umap), the user can select galaxies which have similar properties. In this case the similarity is an abstract similarity between the spectra of the galaxies. See the figure below for an example:
 
 ![lasso select](lasso_png.png)
 
@@ -27,7 +27,7 @@ It is possible to now switch to a different embedding and see were the selected 
 
 The different UMAP embeddings refer to different regions of the spectrum. Galaxies that are located  near each other on the ```UMAP 4700-5100 A``` embedding are expected to have similar spectral properties in this specific region.  For a discussion and use cases of the merits of inspecting the data in subspaces see [Reis19](in prep).
 
-## Color schemes
+## Coloring the data
 
 The galaxies can also colored by several different properties:
 
@@ -35,7 +35,7 @@ The galaxies can also colored by several different properties:
 
 Most of these properties are taken from the [SDSS value added catalogs](https://www.sdss.org/dr14/data_access/value-added-catalogs/), the rest are calculated by us.
 
-If you have suggestions for additional embeddings of color schemes, let us know!
+If you have suggestions for additional embeddings of color schemes, [let us know!](mailto:itamarreis@mail.tau.ac.il)
 
 ## Anomaly detection
 
@@ -54,7 +54,7 @@ A comparison between the different methods and a discussion on the need of more 
 ### <a id="orderSection"></a> Ordering the selected objects
 
 
-The ```Get order``` button could be used to order the selected objects before visually inspecting them. The ordering is based on the current embedding. Instead of going randomly from one selected object to another we might want to inspect objects with similar properties in groups. The ```Get order``` button effectively tries to find the shortest path to travel (on the embedding) between the selected objects.
+The ```Get order``` button can optionally be used to order the selected objects before visually inspecting them. The ordering is based on the current embedding. Instead of going randomly from one selected object to another one might want to inspect objects with similar properties in groups. The ```Get order``` button effectively tries to find the shortest path to travel between the selected objects, on the embedding.
 This can be useful for inspecting anomalies, as inspecting a group of anomalies with similar features can help us understand what are their unusual properties.
 
 ![get order button](order.png)
