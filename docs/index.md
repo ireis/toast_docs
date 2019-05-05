@@ -4,7 +4,7 @@
 
 The source code for [toast](http://138.197.206.129:5010/galaxies) is publicly available, it is written in python using the [bokeh](https://bokeh.pydata.org/en/latest/) library.
 
-The machine learning techniques used in [toast](http://138.197.206.129:5010/galaxies) include Uniform Manifold Approximation and Projection [UMAP](https://github.com/lmcinnes/umap) for dimensionality reduction, in addition to several anomaly detection methods: (i) Unsupervised Random Forest ([Shi06](https://horvath.genetics.ucla.edu/html/RFclustering/RFclustering/RandomForestHorvath.pdf), [Baron16](https://arxiv.org/abs/1611.07526), [Reis18](https://arxiv.org/abs/1711.00022)), (ii) Isolation Forest [Liu08](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html#id1), (iii) Fisher Vectors ([Rotman19](in prep)) (iv) ... (v) ... .  --- is also used for ordering the galaxies before inspection (see [get order](#orderSection)).
+The machine learning techniques used in [toast](http://138.197.206.129:5010/galaxies) include Uniform Manifold Approximation and Projection ([UMAP](https://github.com/lmcinnes/umap)) for dimensionality reduction, in addition to several anomaly detection methods: (i) Unsupervised Random Forest ([Shi06](https://horvath.genetics.ucla.edu/html/RFclustering/RFclustering/RandomForestHorvath.pdf), [Baron16](https://arxiv.org/abs/1611.07526), [Reis18](https://arxiv.org/abs/1711.00022)), (ii) Isolation Forest ([Liu08](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html#id1)), (iii) Fisher Vectors ([Rotman19](in prep)) (iv) ... (v) ... .  --- is also used for ordering the galaxies before inspection (see [get order](#orderSection)).
 
 ## Overview and basic use case
 
@@ -19,7 +19,7 @@ The selected galaxies are now listed in the right side of the screen and we can 
 ![view selected galaxies](view_selected.png)
 
 
-## Different Embeddings
+## Different embeddings
 
 It is possible to now switch to a different embedding and see were the selected galaxies fall there. In our example we have selected strong Hd galaxies. This galaxies are similar in the region of the spectrum located around the Hd line, and indeed they are located near each other on a UMAP embedding of this region of the spectrum. Switching to a different embedding, that looks at a different region of the spectrum, we can check if this group of strong Hd galaxies  also have similar properties in other parts of the spectrum. Selecting an embedding is done with the following button:
 
