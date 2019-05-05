@@ -19,7 +19,7 @@ The selected galaxies are now listed in the right side of the screen and we can 
 ![view selected galaxies](view_selected.png)
 
 
-### Embeddings
+## Different Embeddings
 
 It is possible to now switch to a different embedding and see were the selected galaxies fall there. In our example we have selected strong Hd galaxies. This galaxies are similar in the region of the spectrum located around the Hd line, and indeed they are located near each other on a UMAP embedding of this region of the spectrum. Switching to a different embedding, that looks at a different region of the spectrum, we can check if this group of strong Hd galaxies  also have similar properties in other parts of the spectrum. Selecting an embedding is done with the following button:
 
@@ -27,7 +27,7 @@ It is possible to now switch to a different embedding and see were the selected 
 
 The different UMAP embeddings refer to different regions of the spectrum. Galaxies that are located  near each other on the ```UMAP 4700-5100 A``` embedding are expected to have similar spectral properties in this specific region.  For a discussion and use cases of the merits of inspecting the data in subspaces see [Reis19](in prep).
 
-### Color schemes
+## Color schemes
 
 The galaxies can also colored by several different properties:
 
