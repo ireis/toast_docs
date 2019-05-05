@@ -43,7 +43,7 @@ If you have suggestions for additional embeddings of color schemes, [let us know
 
 ![anomaly detection](show_anomalies.png)
 
-This will select the top 100 anomalies according to the Isolation Forest algorithm, show them on the current embedding, and list them on the right hand side. This is shown in the Figure below with the spectrum of one of the detected anomalies.
+The example in the figure above will select the top 100 anomalies according to the Isolation Forest algorithm, show them on the current embedding, and list them on the right hand side. The result is shown in the Figure below with the spectrum of one of the detected anomalies.
 
 ![isolation forest anomalies](isf_anomalies.png)
 
