@@ -4,11 +4,17 @@
 
 The source code for [toast](http://138.197.206.129:5010/galaxies) is publicly available, it is written in python using the [bokeh](https://bokeh.pydata.org/en/latest/) library.
 
-The machine learning techniques used in [toast](http://138.197.206.129:5010/galaxies) include Uniform Manifold Approximation and Projection [UMAP](https://github.com/lmcinnes/umap) for dimensionality reduction, anomaly detection by Unsupervised Random Forest ([Shi06](https://horvath.genetics.ucla.edu/html/RFclustering/RFclustering/RandomForestHorvath.pdf), [Baron16](https://arxiv.org/abs/1611.07526), [Reis18](https://arxiv.org/abs/1711.00022)), Isolation Forest [Liu08](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html#id1), and Fisher Vectors ... .
+The machine learning techniques used in [toast](http://138.197.206.129:5010/galaxies) include Uniform Manifold Approximation and Projection [UMAP](https://github.com/lmcinnes/umap) for dimensionality reduction, in addition to several anomaly detection methods: (i) Unsupervised Random Forest ([Shi06](https://horvath.genetics.ucla.edu/html/RFclustering/RFclustering/RandomForestHorvath.pdf), [Baron16](https://arxiv.org/abs/1611.07526), [Reis18](https://arxiv.org/abs/1711.00022)), (ii) Isolation Forest [Liu08](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html#id1), (iii) Fisher Vectors ... (iv) ... (v) ... . 
 
-## Overview
+## Overview and basic use case
 
-[toast](http://138.197.206.129:5010/galaxies) allows the user to view and select galaxies on a 2D embedding of the dataset. One of the supplied embedding is the familiar diagram [BPT]() 
+[toast](http://138.197.206.129:5010/galaxies) allows the user to view and select galaxies on a 2D embedding of the dataset. One of the supplied embedding is the familiar  Baldwin, Phillips & Telervich diagram [BPT](http://adsabs.harvard.edu/abs/1981PASP...93....5B). Using this embedding the user can select and view galaxies which have similar line ratios. Similarly, using the embeddings created by [UMAP](https://github.com/lmcinnes/umap), the user can select galaxies which have similar properties. In this case the similarity is an abstract similarity between the spectra of the galaxies. See the figure below for an example:
+
+![lasso select](lasso_png.png)
+
+The selected galaxies are now listed in the right side of the screen and we can inspect their spectra. We can also sort the selected galaxies by the property according to which the galaxies are colored. This is show in the figure below
+
+![lasso select](view_selected.png)
 
 ## Notes
 
