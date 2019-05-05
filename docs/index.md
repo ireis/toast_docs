@@ -1,10 +1,10 @@
 # toast
 
-[toast](http://138.197.206.129:5010/galaxies) is a data driven exploration tool of the Sloan Digital Sky Survey [SDSS](https://www.sdss.org/) galaxy spectra dataset. Currently it contains spectra of ~200,000 high SNR galaxies and quasars.
+[toast](http://138.197.206.129:5010/galaxies) ([Reis19](in prep)) is a data driven exploration tool of the Sloan Digital Sky Survey [SDSS](https://www.sdss.org/) galaxy spectra dataset. Currently it contains spectra of ~200,000 high SNR galaxies and quasars.
 
 The source code for [toast](http://138.197.206.129:5010/galaxies) is publicly available, it is written in python using the [bokeh](https://bokeh.pydata.org/en/latest/) library.
 
-The machine learning techniques used in [toast](http://138.197.206.129:5010/galaxies) include Uniform Manifold Approximation and Projection [UMAP](https://github.com/lmcinnes/umap) for dimensionality reduction, in addition to several anomaly detection methods: (i) Unsupervised Random Forest ([Shi06](https://horvath.genetics.ucla.edu/html/RFclustering/RFclustering/RandomForestHorvath.pdf), [Baron16](https://arxiv.org/abs/1611.07526), [Reis18](https://arxiv.org/abs/1711.00022)), (ii) Isolation Forest [Liu08](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html#id1), (iii) Fisher Vectors ... (iv) ... (v) ... . 
+The machine learning techniques used in [toast](http://138.197.206.129:5010/galaxies) include Uniform Manifold Approximation and Projection [UMAP](https://github.com/lmcinnes/umap) for dimensionality reduction, in addition to several anomaly detection methods: (i) Unsupervised Random Forest ([Shi06](https://horvath.genetics.ucla.edu/html/RFclustering/RFclustering/RandomForestHorvath.pdf), [Baron16](https://arxiv.org/abs/1611.07526), [Reis18](https://arxiv.org/abs/1711.00022)), (ii) Isolation Forest [Liu08](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html#id1), (iii) Fisher Vectors ([Rotman19](in prep)) (iv) ... (v) ... .  --- is also used for ordering the galaxies before inspection (see below).
 
 ## Overview and basic use case
 
@@ -12,32 +12,28 @@ The machine learning techniques used in [toast](http://138.197.206.129:5010/gala
 
 ![lasso select](lasso_png.png)
 
-The selected galaxies are now listed in the right side of the screen and we can inspect their spectra. We can also sort the selected galaxies by the property according to which the galaxies are colored. This is show in the figure below
+The selected galaxies are now listed in the right side of the screen and we can inspect their spectra. We can also sort the selected galaxies by the property according to which the galaxies are colored. This is shows in the figure below:
 
-![lasso select](view_selected.png)
+![view selected galaxies](view_selected.png)
+
+It is also possible to now switch to a different embedding and see were the selected galaxies fall there. In our example we have selected strong Hd galaxies. This galaxies are similar in the region of the spectrum located around the Hd line, and indeed they are located near each other on a UMAP embedding of this region of the spectrum. Switching to a different embedding, that looks at a different region of the spectrum, we can check if this group of strong Hd galaxies  also have similar properties in other parts of the spectrum. Selecting an embedding is done with the following button:
+
+![available embeddings](embeds.png)
+
+The different UMAP embeddings refer to different regions of the spectrum. Galaxies that are located  near each other on the ```UMAP 4700-5100 A``` embedding are expected to have similar spectral properties in this specific region.  For a discussion and use cases of the merits of inspecting the data in subspaces see [Reis19](in prep).
+
+The galaxies can also colored by several different properties:
+
+![available colors](colors.png)
+
+Most of these properties are taken from the [SDSS value added catalogs](https://www.sdss.org/dr14/data_access/value-added-catalogs/), the rest are calculated by us.
+
+If you have suggestions for additional embeddings of color schemes, let us know!
+
+## Anomaly detection
 
 ## Notes
 
 Interactive graphs can get very heavy with more than  a few thousands of objects. For this reason we implemented an adaptive viewer which shows a random subset of the objects with a fixed size. The user can see additional objects by zooming in on a specific region. An example is shown in the Figure below:
 
 ![umap zoom example](umap_zoom.png)
-
-## Features
-
-
-
-
-
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
