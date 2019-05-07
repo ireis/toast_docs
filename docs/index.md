@@ -16,7 +16,7 @@ All these objects are presented on a single, interactive, 2D map of the data. Se
 
 The source code for [*toast*](http://138.197.206.129:5010/galaxies) is publicly available, it is written in python using the [bokeh](https://bokeh.pydata.org/en/latest/) library.
 
-The machine learning techniques used in [*toast*](http://138.197.206.129:5010/galaxies) include Uniform Manifold Approximation and Projection ([UMAP](https://github.com/lmcinnes/umap)) for dimensionality reduction, in addition to several anomaly detection methods: (i) Unsupervised Random Forest ([Shi06](https://horvath.genetics.ucla.edu/html/RFclustering/RFclustering/RandomForestHorvath.pdf), [Baron16](https://arxiv.org/abs/1611.07526), [Reis18](https://arxiv.org/abs/1711.00022)), (ii) Isolation Forest ([Liu08](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html#id1)), (iii) Fisher Vectors ([Rotman19](in prep)) (iv) ... (v) ... .  --- is also used for ordering the galaxies before inspection (see [get order](#orderSection)).  The code we used to produce all these results is available at ... .
+The machine learning techniques used in [*toast*](http://138.197.206.129:5010/galaxies) include Uniform Manifold Approximation and Projection ([UMAP](https://github.com/lmcinnes/umap)) for dimensionality reduction, in addition to several anomaly detection methods: (i) Unsupervised Random Forest ([Shi06](https://horvath.genetics.ucla.edu/html/RFclustering/RFclustering/RandomForestHorvath.pdf), [Baron16](https://arxiv.org/abs/1611.07526), [Reis18](https://arxiv.org/abs/1711.00022)), (ii) Isolation Forest ([Liu08](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html#id1)), (iii) Fisher Vectors ([Rotman19](in prep)) (iv) PCA reconstruction ([Boroson10](https://ui.adsabs.harvard.edu/abs/2010AJ....140..390B/abstract)).   The code we used to produce all these results is publicly available. For Isolation Forest and PCA we used [scikit-learn](https://scikit-learn.org/stable/), and for Unsupervised Random Forest we used both [scikit-learn](https://scikit-learn.org/stable/) and [our own implementation](https://github.com/ireis/PRF). Our Fisher Vectors code relies on [VLFeat](http://www.vlfeat.org/). [NetworkX](https://networkx.github.io/) was used for [ordering the galaxies](#orderSection) before inspection. 
 
 ## Overview
 
@@ -31,7 +31,7 @@ The selected galaxies are now listed in the right side of the screen and we can 
 ![view selected galaxies](view_selected.png)
 
 ### buttons
-In addition to the lasso selection tool, a few other interactive tools are available. The most relevant in our case are the [zoom in](#zoomInNote)  button, refresh, and save figure. These are shown in the Figure below:
+In addition to the lasso selection tool, a few other interactive tools are available. The most relevant in our case are the [zoom in](#zoomInNote)  button, refresh, and save figure. These are shown in the figure below:
 ![buttons](buttons.png)
 
 
@@ -59,7 +59,7 @@ If you have suggestions for additional embeddings of color schemes, [let us know
 
 ![anomaly detection](show_anomalies.png)
 
-The example in the figure above will select the top 100 anomalies according to the Isolation Forest algorithm, show them on the current embedding, and list them on the right hand side. The result is shown in the Figure below with the spectrum of one of the detected anomalies.
+The example in the figure above will select the top 100 anomalies according to the Isolation Forest algorithm, show them on the current embedding, and list them on the right hand side. The result is shown in the figure below with the spectrum of one of the detected anomalies.
 
 ![isolation forest anomalies](isf_anomalies.png)
 
@@ -79,6 +79,6 @@ This can be useful for inspecting anomalies, as inspecting a group of anomalies 
 
 ### <a id="zoomInNote"></a> Adaptive viewer
 
-Interactive graphs can get very heavy with more than  a few thousands of objects. For this reason we implemented an adaptive viewer which shows a random subset of the objects with a fixed size. The user can see additional objects by zooming in on a specific region. An example is shown in the Figure below:
+Interactive graphs can get very heavy with more than  a few thousands of objects. For this reason we implemented an adaptive viewer which shows a random subset of the objects with a fixed size. The user can see additional objects by zooming in on a specific region. An example is shown in the figure below:
 
 ![umap zoom example](umap_zoom.png)
