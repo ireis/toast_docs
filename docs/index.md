@@ -16,7 +16,7 @@ All these objects are presented on a single, interactive, 2D map of the data. Se
 
 The source code for [*toast*](http://138.197.206.129:5010/galaxies) is publicly available, it is written in python using the [bokeh](https://bokeh.pydata.org/en/latest/) library.
 
-The machine learning techniques used in [*toast*](http://138.197.206.129:5010/galaxies) include Uniform Manifold Approximation and Projection ([UMAP](https://github.com/lmcinnes/umap)) for dimensionality reduction, in addition to several anomaly detection methods: (i) Unsupervised Random Forest ([Shi06](https://horvath.genetics.ucla.edu/html/RFclustering/RFclustering/RandomForestHorvath.pdf), [Baron16](https://arxiv.org/abs/1611.07526), [Reis18](https://arxiv.org/abs/1711.00022)), (ii) Isolation Forest ([Liu08](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html#id1)), (iii) Fisher Vectors ([Rotman19](in prep)) (iv) PCA reconstruction ([Boroson10](https://ui.adsabs.harvard.edu/abs/2010AJ....140..390B/abstract)).   The code we used to produce all these results is publicly available. For Isolation Forest and PCA we used [scikit-learn](https://scikit-learn.org/stable/), and for Unsupervised Random Forest we used both [scikit-learn](https://scikit-learn.org/stable/) and [our own implementation](https://github.com/ireis/PRF). Our Fisher Vectors code relies on [VLFeat](http://www.vlfeat.org/). [NetworkX](https://networkx.github.io/) was used for [ordering the galaxies](#orderSection) before inspection. 
+The machine learning techniques used in [*toast*](http://138.197.206.129:5010/galaxies) include Uniform Manifold Approximation and Projection ([UMAP](https://github.com/lmcinnes/umap)) for dimensionality reduction, in addition to several anomaly detection methods: (i) Unsupervised Random Forest ([Shi06](https://horvath.genetics.ucla.edu/html/RFclustering/RFclustering/RandomForestHorvath.pdf), [Baron16](https://arxiv.org/abs/1611.07526), [Reis18](https://arxiv.org/abs/1711.00022)), (ii) Isolation Forest ([Liu08](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html#id1)), (iii) Fisher Vectors ([Rotman19](in prep)) (iv) PCA reconstruction ([Boroson10](https://ui.adsabs.harvard.edu/abs/2010AJ....140..390B/abstract)).   The code we used to produce all these results is publicly available. For Isolation Forest and PCA we used [scikit-learn](https://scikit-learn.org/stable/), and for Unsupervised Random Forest we used both [scikit-learn](https://scikit-learn.org/stable/) and [our own implementation](https://github.com/ireis/PRF). Our Fisher Vectors code relies on [VLFeat](http://www.vlfeat.org/). [NetworkX](https://networkx.github.io/) was used for [ordering the galaxies](#orderSection) before inspection.
 
 ## Overview
 
@@ -67,8 +67,19 @@ A comparison between the different methods and a discussion on the need of more 
 
 ## Additional features
 
-###  Ordering the selected objects
+### Catalogs
+[*toast*](http://138.197.206.129:5010/galaxies) includes a number of galaxy catalogs. To view a galaxy catalog, select it from the menu and click the ```Show catalog``` button. The menu is shown in the figure below:
 
+![show catalog](catalogs.png)
+
+This feature could be used in a number of ways. One example is looking for additional examples of the relevant galaxy type. If the selected galaxies are clustered on a given embedding, it is likely that additional examples could be found in the same cluster. Another use case example could be looking for subgroups according to the clustering of  galaxy included in the catalog on the different embeddings.
+
+### Selecting your own galaxies
+Selecting your own galaxies is available using the ```Search Galaxy SpecObjID:``` field, by entering a comma separated list of SDSS SpecObjIDs.
+
+![search galaxies](search.png)
+
+###  Ordering the selected objects
 
 The ```Get order``` button can optionally be used to order the selected objects before visually inspecting them. The ordering is based on the current embedding. Instead of going randomly from one selected object to another one might want to inspect objects with similar properties in groups. The ```Get order``` button effectively tries to find the shortest path to travel between the selected objects, on the embedding.
 This can be useful for inspecting anomalies, as inspecting a group of anomalies with similar features can help us understand what are their unusual properties.
