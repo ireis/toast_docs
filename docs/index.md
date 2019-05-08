@@ -35,13 +35,17 @@ In addition to the lasso selection tool, a few other interactive tools are avail
 ![buttons](buttons.png)
 
 
-## Different embeddings
+## Embeddings
 
-It is possible to switch to a different embedding and see were the selected galaxies fall there. In our example we have selected strong Hd galaxies. This galaxies are similar in the region of the spectrum located around the Hd line, and indeed they are located near each other on a UMAP embedding of this region of the spectrum. Switching to a different embedding, that looks at a different region of the spectrum, we can check if this group of strong Hd galaxies  also have similar properties in other parts of the spectrum. Selecting an embedding is done with the following button:
+[*toast*](http://138.197.206.129:5010/galaxies) includes various embeddings of the data. These currently include the familiar BPT diagrams and a number of ([UMAP](https://github.com/lmcinnes/umap)) created 2 dimensional projections of the data. In the embeddings created using ([UMAP](https://github.com/lmcinnes/umap)) the axes do not have any physical significance. The basic interpretation of these embedding is simple: galaxies that are located near each other have similar spectra. While this notion should be enough to use the embedding for exploring the data, the details can sometimes provide additional insight. These details can be found in [Reis19](in prep).
+
+We create different embeddings by considering different regions of the spectrum separately. We stress that this is done as for the case of galaxy spectra a single embedding will always discard important information. That is, there is no way to replace all the embeddings with a single better embedding. This is shown empirically by the fact that the galaxies cluster differently in the different embeddings. Such information cannot be enclosed in a single embedding, no mater how good it is. This is a  manifestation of the simple fact that two galaxy spectra can be similar in some ways and different in others. The relationship between two galaxy spectra thus can not be described by a single 'similarity' value. Any such single similarity value can be thought of as a weighted average over the similarities of the different features. An weighted average is an average, no matter how good you choose the weights.   See  [Reis19](in prep) for additional discussion.
+
+Selecting an embedding is done with the following button:
 
 ![available embeddings](embeds.png)
 
-The different UMAP embeddings refer to different regions of the spectrum. Galaxies that are located  near each other on the ```UMAP 4700-5100 A``` embedding are expected to have similar spectral properties in this specific region.  For a discussion and use cases of the merits of inspecting the data in subspaces see [Reis19](in prep).
+ Galaxies that are located  near each other on the ```UMAP 4700-5100 A``` embedding could be expected to have similar OIII, and Hb line properties, while    galaxies that are located  near each other on the ```UMAP 5680-6120 A``` embedding could be expected to have similar NaD line properties.
 
 ## Coloring the data
 
