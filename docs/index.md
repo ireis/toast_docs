@@ -59,13 +59,13 @@ This can be useful for inspecting anomalies, as inspecting a group of anomalies 
 
 ![get order button](order.png)
 
-The result of this ordering procedure could be visualized by coloring the embedding according to the order:
+Note the sorting the table is only required for the purpose of viewing the objects one by one, according to the order (that is, it is not required for the stacking procedure described below). The result of the ordering could be visualized by coloring the embedding according to the order:
 
 ![color by the order](color_by_order.png)
 
 ##  Stacking the data
 
-With the ```Get stacks``` button we can look for trends in the data. ```Get stacks``` will bin the selected objects according to the order (which needs to by obtained as described above) and plot the stacked spectra of each bin. Stacking the selected objects from the figure above we get:
+With the ```Get stacks``` button we can look for trends in the data. ```Get stacks``` will bin the selected objects according to the order (which needs to by obtained as described above) and plot the stacked spectrum of each bin. Stacking the selected objects from the figure above we get:
 
 ![stacks](get_stacks.png)
 
