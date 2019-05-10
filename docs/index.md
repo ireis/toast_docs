@@ -65,12 +65,13 @@ The result of this ordering procedure could be visualized by coloring the embedd
 
 ##  Stacking the data
 
-With the ```Get stacks``` button we can look for trends by binning the selected objects according to the order we obtained above and inspecting the stacks. Stacking the objects from the figure above we get:
+With the ```Get stacks``` button we can look for trends in the data. ```Get stacks``` will bin the selected objects according to the order (which needs to by obtained as described above) and plot the stacked spectra of each bin. Stacking the selected objects from the figure above we get:
 
 ![stacks](get_stacks.png)
 
 For clarity, we show four zoom ins on different regions of the same plot. In this group of objects we see trends between the width of the emission lines, the Ha/NII line ratio, the EW of the sodium doublet, and the slope of the stellar continuum. Clearly much  work is needed to turn such observations to physical results, but this is an example of how [*toast*](http://138.197.206.129:5010/galaxies) could be used to generate seeds or ideas for finding correlations in the data.
 
+The stacking could also be done according to the currently selected color and the coordinates of the embedding.
 
 ##  Detecting anomalies
  <a id="anomalyDetection"></a>
