@@ -53,7 +53,8 @@ If you have suggestions for additional embeddings of color schemes, [let us know
 
 
 ##  Ordering the data
-
+ <a id="orderSection"></a>
+ 
 The ```Get order``` button can optionally be used to order the selected objects before visually inspecting them. The ordering is based on the current embedding. Instead of going randomly from one selected object to another one might want to inspect objects with similar properties in groups. The ```Get order``` button effectively tries to find the shortest path to travel between the selected objects, on the embedding.
 This can be useful for inspecting anomalies, as inspecting a group of anomalies with similar features can help us understand what are their unusual properties.
 
