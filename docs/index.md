@@ -7,7 +7,7 @@
 </div>
 
 
-[*toast*](http://138.197.206.129:5010/galaxies) ([Reis19](in prep)) is a data driven exploration tool of the Sloan Digital Sky Survey ([SDSS](https://www.sdss.org/)) galaxy spectra dataset. Currently it contains spectra of ~200,000 high SNR galaxies and quasars.
+[*toast*](http://138.197.206.129:5010/galaxies)  is a data driven exploration tool of the Sloan Digital Sky Survey ([SDSS](https://www.sdss.org/)) galaxy spectra dataset. Currently it contains spectra of ~200,000 high SNR galaxies and quasars.
 
 
 All these objects are presented on a single, interactive, 2D map of the data. Several such maps are available, on each map galaxies that share specific spectral properties are grouped together. By [interactively selecting](#objectSelection)  objects from the maps, the user can obtain and inspect groups of similar galaxies, examine the diversity of spectral features, and in general explore the data without relying on models. [*toast*](http://138.197.206.129:5010/galaxies) also includes the results of several [anomaly detection](#anomalyDetection) algorithms, making at least some of the most unusual galaxies readily available for inspection by the community.
@@ -54,7 +54,7 @@ If you have suggestions for additional embeddings of color schemes, [let us know
 
 ##  Ordering the data
  <a id="orderSection"></a>
- 
+
 The ```Get order``` button can optionally be used to order the selected objects before visually inspecting them. The ordering is based on the current embedding. Instead of going randomly from one selected object to another one might want to inspect objects with similar properties in groups. The ```Get order``` button effectively tries to find the shortest path to travel between the selected objects, on the embedding.
 This can be useful for inspecting anomalies, as inspecting a group of anomalies with similar features can help us understand what are their unusual properties.
 
