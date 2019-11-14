@@ -6,7 +6,7 @@
 <img src="icon.png" , width="350"/>
 </div>
 
-In [Reis19](in prep) we introduced  a data driven exploration portal for the Sloan Digital Sky Survey ([SDSS](https://www.sdss.org/)) galaxy spectra dataset. It should be considered as an example for the approach discussed in that work for effectively using unsupervised ML in next generation astronomical surveys. The portal is [available here](http://138.197.206.129:5010/galaxies), this page provides instructions on how to use it.
+In [Reis19](in prep) we introduced  a data driven exploration portal for the Sloan Digital Sky Survey ([SDSS](https://www.sdss.org/)) galaxy spectra dataset. It should be considered as an example for the approach discussed in that work for effectively using unsupervised ML in next generation astronomical surveys. The portal is available at [galaxyportal.space](http://galaxyportal.space), this page provides instructions on how to use it.
 
 
 The main feature of our such portal is thus  machine learned  two-dimensional embeddings (or maps) of the data, from which objects can be interactively selected and inspected. The interactive maps should be used with the simple notion that similar objects  are located close to each other.    Inspecting the maps with this notion, detecting potentially interesting phenomena is intuitive; objects that are isolated  on a map are interpreted as objects that are not similar to any other object in the dataset. Any structure in the ordering of objects suggests a continuous change in the properties of objects along the structure, and a compact group of objects implies the objects share some common properties. While the maps are built using ML their usage is intuitive and does not require any prior knowledge in this field.  
