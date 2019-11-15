@@ -6,7 +6,7 @@
 <img src="icon.png" , width="350"/>
 </div>
 
-In [Reis19](in prep) we introduced  a data driven exploration portal for the Sloan Digital Sky Survey ([SDSS](https://www.sdss.org/)) galaxy spectra dataset. It should be considered as an example for the approach discussed in that work for effectively using unsupervised ML in next generation astronomical surveys. The portal is available at [galaxyportal.space](http://galaxyportal.space), this page provides instructions on how to use it.
+In [Reis19](in prep) we introduced  a data driven exploration portal for the Sloan Digital Sky Survey ([SDSS](https://www.sdss.org/)) galaxy spectra dataset. It should be considered as an example for the approach discussed in that work for effectively using unsupervised ML in next generation astronomical surveys. The portal is available at [galaxyportal.space](http://galaxyportal.space), this page provides instructions on how to use it. The source code for the portal is available at [github.com/ireis/portal](https://github.com/ireis/portal).
 
 
 The main feature of our such portal is thus  machine learned  two-dimensional embeddings (or maps) of the data, from which objects can be interactively selected and inspected. The interactive maps should be used with the simple notion that similar objects  are located close to each other.    Inspecting the maps with this notion, detecting potentially interesting phenomena is intuitive; objects that are isolated  on a map are interpreted as objects that are not similar to any other object in the dataset. Any structure in the ordering of objects suggests a continuous change in the properties of objects along the structure, and a compact group of objects implies the objects share some common properties. While the maps are built using ML their usage is intuitive and does not require any prior knowledge in this field.  
@@ -15,11 +15,11 @@ The main feature of our such portal is thus  machine learned  two-dimensional em
 
 ## Interactive similarity-based object selection
 <a id="objectSelection"></a>
-The portal allows the user to view and select galaxies from a 2D embedding of the dataset using a lass tool.   See the figure below for an example:
+The portal allows the user to view and select galaxies from a 2D embedding of the dataset using a lasso tool. To use the lasso tool, first select the it from the menu  (top left of the UMAP panel), and hold and drag to select a region on the map.  See the figure below for an example:
 
 ![lasso select](lasso_png.png)
 
-The selected galaxies are now listed in the right side of the screen and we can inspect their spectra.  This is shown in the figure below:
+The selected galaxies are now listed in the right side of the screen and we can inspect their spectra. Click an object on the list to select it. It is also possible to navigate through the list using the keyboard arrows.   This is shown in the figure below:
 
 ![view selected galaxies](view_selected.png)
 
