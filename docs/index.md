@@ -78,7 +78,7 @@ Selecting your own galaxies is available using the ```Search Galaxy SpecObjID:``
 
 ## Code and methods
 
-The source code for portal is [publicly available](https://github.com/ireis/potral), it is written in python using the [bokeh](https://bokeh.pydata.org/en/latest/) library.
+The source code for portal is [publicly available](https://github.com/ireis/portal), it is written in python using the [bokeh](https://bokeh.pydata.org/en/latest/) library.
 
 The machine learning methods used  include Uniform Manifold Approximation and Projection ([UMAP](https://github.com/lmcinnes/umap)) for dimensionality reduction, in addition to several anomaly detection methods: (i) Unsupervised Random Forest ([Shi06](https://horvath.genetics.ucla.edu/html/RFclustering/RFclustering/RandomForestHorvath.pdf), [Baron16](https://arxiv.org/abs/1611.07526), [Reis18](https://arxiv.org/abs/1711.00022)), (ii) Isolation Forest ([Liu08](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html#id1)), (iii) Fisher Vectors ([Rotman19](http://www.insticc.org/node/TechnicalProgram/ic3k/presentationDetails/81633)) (iv) PCA reconstruction ([Boroson10](https://ui.adsabs.harvard.edu/abs/2010AJ....140..390B/abstract)).   The code we used to produce all these results is publicly available. For Isolation Forest and PCA we used [scikit-learn](https://scikit-learn.org/stable/), and for Unsupervised Random Forest we used both [scikit-learn](https://scikit-learn.org/stable/) and [our own implementation](https://github.com/ireis/PRF). Our Fisher Vectors code relies on [VLFeat](http://www.vlfeat.org/). Something that makes a lot of sense and is certainly not a random hack was used for [ordering the galaxies](#orderSection) before inspection.
 
